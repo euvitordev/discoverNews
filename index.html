@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <script
+      src="https://kit.fontawesome.com/15a9823835.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Day News</title>
+  </head>
+  <body>
+    <header>
+      <div class="categories">
+        <section class="category-section">
+          <button class="category" id="myFeed">Meu feed</button>
+          <button class="category">Tecnologia</button>
+          <button class="category">Negócios</button>
+          <button class="category" id="mobile">Entretenimento</button>
+          <button class="category" id="mobile">Esportes</button>
+          <button class="category" id="mobile">Saúde</button>
+        </section>
+      </div>
+    </header>
+
+    <main>
+      <div class="feed">
+        <div id="news-container"></div>
+      </div>
+
+      <div id="loading">
+        <div class="spinner"></div>
+      </div>
+
+      <button
+        id="scroll-top-button"
+        class="scroll-top-button"
+        aria-label="Scroll to top"
+      >
+        <i class="fa-solid fa-arrow-up"></i>
+      </button>
+    </main>
+
+    <footer></footer>
+
+    <!-- <script src="/node_modules/moment/moment.js"></script> -->
+    <!-- <script src="/node_modules/moment/locale/pt-br.js"></script> -->
+
+    <script src="./js/main.js"></script>
+
+    <!-- <script src="./js/dropdown.js"></script> -->
+    <!-- <script src="./js/wather.js"></script> -->
+  </body>
+</html>
