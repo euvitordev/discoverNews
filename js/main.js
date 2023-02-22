@@ -1,6 +1,3 @@
-const apiKey = "765e6d14e97e4d86841a758c39cab2e5"
-const apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`
-
 const newsContainer = document.getElementById("news-container")
 
 // Efeito scroll top button
@@ -24,6 +21,9 @@ scrollTopButton.addEventListener("click", scrollToTop)
 window.addEventListener("scroll", onScroll)
 
 // Função para criar os elementos HTML para uma notícia
+const apiKey = "765e6d14e97e4d86841a758c39cab2e5"
+const apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`
+
 function createNewsElement(news) {
   const newsElement = document.createElement("div")
   newsElement.classList.add("news")
