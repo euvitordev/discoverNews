@@ -68,6 +68,15 @@ function createNewsElement(news) {
 
 // Função para adicionar as notícias no container
 function renderNews(news, append) {
+  function renderNews(articles) {
+    if (!articles || !Array.isArray(articles) || articles.length === 0) {
+      console.error("No articles to render.")
+      return
+    }
+
+    // o resto do seu código para renderizar as notícias
+  }
+
   if (!append) {
     newsContainer.innerHTML = ""
   }
