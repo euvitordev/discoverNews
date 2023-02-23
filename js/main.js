@@ -1,4 +1,4 @@
-const apiKey = "765e6d14e97e4d86841a758c39cab2e5"
+// const apiKey = "765e6d14e97e4d86841a758c39cab2e5"
 const apiUrl = `https://newsapi.org/v2/everything?q=apple&from=2023-02-22&to=2023-02-22&sortBy=popularity&apiKey=765e6d14e97e4d86841a758c39cab2e5`
 
 const newsContainer = document.getElementById("news-container")
