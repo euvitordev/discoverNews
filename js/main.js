@@ -1,8 +1,5 @@
 const apiKey = "765e6d14e97e4d86841a758c39cab2e5"
-// const apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`
-
-const apiUrl =
-  "https://newsapi.org/v2/everything?q=apple&from=2023-02-21&to=2023-02-21& sortBy=popularity&apiKey=765e6d14e97e4d86841a758c39cab2e5"
+const apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`
 
 const newsContainer = document.getElementById("news-container")
 
@@ -47,10 +44,10 @@ function createNewsElement(news) {
   const infos = document.createElement("div")
   infos.classList.add("infos")
 
-  const button = document.createElement("button")
-  button.classList.add("fonte")
-  button.textContent = "Visitar"
-  button.addEventListener("click", () => {
+  const buttonUrl = document.createElement("button")
+  buttonUrl.classList.add("fonte")
+  buttonUrl.textContent = "Visitar"
+  buttonUrl.addEventListener("click", () => {
     alert("Botao clicado")
     window.open(news.url, "_blank")
   })
@@ -60,7 +57,7 @@ function createNewsElement(news) {
 
   description.appendChild(h2)
   description.appendChild(p)
-  infos.appendChild(button)
+  infos.appendChild(buttonUrl)
   infos.appendChild(span)
   newsElement.appendChild(img)
   newsElement.appendChild(description)
@@ -86,7 +83,7 @@ function renderNews(news, append) {
 }
 
 // Fazer a requisição à API e adicionar as notícias no container
-fetch(apiUrl)
+fetch(apiUrl, { mode: "cors" })
   .then((response) => response.json())
   .then((data) => {
     renderNews(data.articles)
@@ -147,7 +144,7 @@ categoryButtons.forEach((button) => {
     loading.style.display = "block"
 
     // Fazer a requisição à API e adicionar as notícias no container
-    fetch(apiUrl)
+    fetch(apiUrl, { mode: "cors" })
       .then((response) => response.json())
       .then((data) => {
         // Esconder o elemento de carregamento após receber os dados da API
@@ -161,7 +158,7 @@ categoryButtons.forEach((button) => {
       })
 
     // Fazer uma nova solicitação à API com a URL atualizada e renderizar as notícias resultantes
-    fetch(apiUrl)
+    fetch(apiUrl, { mode: "cors" })
       .then((response) => response.json())
       .then((data) => renderNews(data.articles))
       .catch((error) => console.error(error))
