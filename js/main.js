@@ -109,30 +109,30 @@ categoryButtons.forEach((button) => {
     let category = button.textContent
     let apiUrl
 
-    // Alterne a URL da API com base na categoria selecionada
-    switch (category) {
-      case "Meu feed":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`
-        break
-      case "Tecnologia":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=technology&apiKey=${apiKey}`
-        break
-      case "Entretenimento":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=entertainment&apiKey=${apiKey}`
-        break
-      case "Negócios":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=business&apiKey=${apiKey}`
-        break
-      case "Esportes":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=sports&apiKey=${apiKey}`
-        break
-      case "Saúde":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=health&apiKey=${apiKey}`
-        break
-      case "Ciência":
-        apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=science&apiKey=${apiKey}`
-        break
-    }
+    // // Alterne a URL da API com base na categoria selecionada
+    // switch (category) {
+    //   case "Meu feed":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&apiKey=${apiKey}`
+    //     break
+    //   case "Tecnologia":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=technology&apiKey=${apiKey}`
+    //     break
+    //   case "Entretenimento":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=entertainment&apiKey=${apiKey}`
+    //     break
+    //   case "Negócios":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=business&apiKey=${apiKey}`
+    //     break
+    //   case "Esportes":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=sports&apiKey=${apiKey}`
+    //     break
+    //   case "Saúde":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=health&apiKey=${apiKey}`
+    //     break
+    //   case "Ciência":
+    //     apiUrl = `https://newsapi.org/v2/top-headlines?country=br&category=science&apiKey=${apiKey}`
+    //     break
+    // }
 
     // Role para o topo da tela
     window.scrollTo({ top: 0, behavior: "smooth" })
